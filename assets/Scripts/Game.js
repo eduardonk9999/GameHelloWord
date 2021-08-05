@@ -33,6 +33,9 @@ cc.Class({
     var newStar = cc.instantiate(this.starPrefab);
     this.node.addChild(newStar);
     newStar.setPosition(this.getNewStarPosition());
+
+    newStar.getComponent('Star').game = this;
+
   },
   getNewStarPosition: function () {
     var randX = 0;
